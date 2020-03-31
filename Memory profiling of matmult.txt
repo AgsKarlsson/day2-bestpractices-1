@@ -1,0 +1,17 @@
+It appears that most memory usage is outside the functions? 
+Maybe imported random or memory profiler itself?
+Insert results is what stores most data among these functions.
+
+
+
+%memit generate_matrix(250)
+	peak memory: 59.60 MiB, increment: 0.81 MiB
+
+%memit result=empty_results()
+	peak memory: 57.90 MiB, increment: -1.70 MiB
+
+%memit insert_results
+	peak memory: 59.65 MiB, increment: 1.73 MiB
+
+%memit show_results()
+	peak memory: 60.66 MiB, increment: 1.00 MiB

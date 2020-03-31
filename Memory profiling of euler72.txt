@@ -1,0 +1,9 @@
+Again, almost all memory comes from outside the functions
+However, among the functions, gen_prime(1000) is the source of most memory use
+
+
+%memit primes=gen_primes(1000)
+	peak memory: 52.65 MiB, increment: 0.16 MiB
+
+%memit fraq=phi_range(10000)
+	peak memory: 52.68 MiB, increment: 0.01 MiB
