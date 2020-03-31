@@ -25,14 +25,17 @@ def insert_results():
     #insert_results is by far the slowest part of the script,
     #this is where I would focus the optimization if possible
     
+    #What I would like to do is to instead to matrix operations instead of
+    #cycling through all of the values of the matricies. However,
+    #I don't think I can do that without using numpy.
+    
     # iterate through rows of X
     for i in range(len(X)):
         # iterate through columns of Y
         for j in range(len(Y[0])):
             # iterate through rows of Y
-            #for k in range(len(Y)):
-             #   result[i][j] += X[i][k] * Y[k][j]
-            result[i][j]=X[i][:]*Y[:][j]
+            for k in range(len(Y)):
+                result[i][j] += X[i][k] * Y[k][j]
               
 def show_results():
     for r in result:
